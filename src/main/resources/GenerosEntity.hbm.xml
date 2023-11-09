@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="sv.edu.udb.www.practica_springmvc.entities.GenerosEntity" table="generos" schema="inventario_libros">
+        <id name="idGenero">
+            <column name="id_genero" sql-type="int(11)"/>
+        </id>
+        <property name="nombreGenero">
+            <column name="nombre_genero" sql-type="varchar(40)" length="40"/>
+        </property>
+        <property name="descripcion">
+            <column name="descripcion" sql-type="varchar(100)" length="100"/>
+        </property>
+    </class>
+</hibernate-mapping>

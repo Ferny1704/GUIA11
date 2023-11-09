@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/inventario_libros?useSSL=false</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="hibernate.enable_lazy_load_no_trans">true</property>
+        <mapping class="sv.edu.udb.www.practica_springmvc.entities.AutoresEntity"/>
+        <mapping resource="AutoresEntity.hbm.xml"/>
+        <mapping class="sv.edu.udb.www.practica_springmvc.entities.EditorialesEntity"/>
+        <mapping resource="EditorialesEntity.hbm.xml"/>
+        <mapping class="sv.edu.udb.www.practica_springmvc.entities.GenerosEntity"/>
+        <mapping resource="GenerosEntity.hbm.xml"/>
+        <mapping resource="LibrosEntity.hbm.xml"/>
+        <mapping class="sv.edu.udb.www.practica_springmvc.entities.LibrosEntity"/>
+        <!-- <property name="connection.username"/> -->
+        <!-- <property name="connection.password"/> -->
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
